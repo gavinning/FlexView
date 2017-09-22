@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        flexview()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +22,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func flexview() {
+        let flex = FlexView(frame: view.frame)
+        
+        flex.axis = .horizontal
+        flex.backgroundColor = .gray
+        
+        flex.isDirectionalLockEnabled = true
 
+        ["001", "002", "003", "004", "005", "006", "007", "008", "009"].forEach { name in
+            let img = UIImageView(name: name, width: flex.frame.width)
+            flex.addSubview(img!)
+        }
+        
+        flex.spacing = 10
+        flex.axis = .vertical
+        
+        flex.contentSize.height = max(flex.usedSpace.y, view.frame.height)
+        flex.contentSize.width = max(flex.usedSpace.x, view.frame.width)
+        
+        view.addSubview(flex)
+    }
 }
 

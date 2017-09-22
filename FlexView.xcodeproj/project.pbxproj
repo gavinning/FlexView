@@ -12,6 +12,8 @@
 		F0AEF48D1F73832A006E613F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AEF48B1F73832A006E613F /* Main.storyboard */; };
 		F0AEF48F1F73832A006E613F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0AEF48E1F73832A006E613F /* Assets.xcassets */; };
 		F0AEF4921F73832A006E613F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AEF4901F73832A006E613F /* LaunchScreen.storyboard */; };
+		F0AEF49A1F7383B0006E613F /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEF4991F7383B0006E613F /* extensions.swift */; };
+		F0AEF49C1F7383C2006E613F /* FlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEF49B1F7383C2006E613F /* FlexView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F0AEF48E1F73832A006E613F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0AEF4911F73832A006E613F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0AEF4931F73832A006E613F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0AEF4991F7383B0006E613F /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		F0AEF49B1F7383C2006E613F /* FlexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				F0AEF4871F73832A006E613F /* AppDelegate.swift */,
 				F0AEF4891F73832A006E613F /* ViewController.swift */,
+				F0AEF4991F7383B0006E613F /* extensions.swift */,
+				F0AEF49B1F7383C2006E613F /* FlexView.swift */,
 				F0AEF48B1F73832A006E613F /* Main.storyboard */,
 				F0AEF48E1F73832A006E613F /* Assets.xcassets */,
 				F0AEF4901F73832A006E613F /* LaunchScreen.storyboard */,
@@ -139,6 +145,8 @@
 			files = (
 				F0AEF48A1F73832A006E613F /* ViewController.swift in Sources */,
 				F0AEF4881F73832A006E613F /* AppDelegate.swift in Sources */,
+				F0AEF49A1F7383B0006E613F /* extensions.swift in Sources */,
+				F0AEF49C1F7383C2006E613F /* FlexView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
