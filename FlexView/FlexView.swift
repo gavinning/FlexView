@@ -74,8 +74,9 @@ public class FlexView: UIScrollView {
     // 所有子视图宽度之和
     public var sumWidth: CGFloat {
         var width: CGFloat = 0
-        frames.forEach { view in
-            width += view.key.frame.size.width
+        frames.forEach { (view, frame) in
+            // 把子视图原有的X轴偏移量添加到宽度计算中，用于计算空间占用
+            width += view.frame.size.width + frame.origin.x
         }
         return width
     }
@@ -83,8 +84,9 @@ public class FlexView: UIScrollView {
     // 所有子视图高度之和
     public var sumHeight: CGFloat {
         var height: CGFloat = 0
-        frames.forEach { view in
-            height += view.key.frame.size.height
+        frames.forEach { (view, frame) in
+            // 把子视图原有的Y轴偏移量添加到高度计算中，用于计算空间占用
+            height += view.frame.size.height + frame.origin.y
         }
         return height
     }
@@ -130,13 +132,13 @@ public class FlexView: UIScrollView {
         // 垂直方向 更新y轴偏移量
         // A: 所以这里y轴的偏移量要减去自身的高度
         if axis == .vertical {
-            view.frame.origin.y += usedSpace.y - view.frame.size.height
+            view.frame.origin.y += usedSpace.y - view.frame.size.height - view.frame.origin.y
         }
         
         // 水平方向 更新x轴偏移量
         // A: 所以这里x轴的偏移量要减去自身的宽度
         if axis == .horizontal {
-            view.frame.origin.x += usedSpace.x - view.frame.size.width
+            view.frame.origin.x += usedSpace.x - view.frame.size.width - view.frame.origin.x
         }
         
         super.addSubview(view)
@@ -148,7 +150,7 @@ public class FlexView: UIScrollView {
         var offset: CGFloat = 0
         
         subviews.forEach { view in
-            guard let frame = frames[view] else {
+            guard let frame = frames[view], view.alpha != 0 else {
                 return
             }
             
@@ -160,7 +162,7 @@ public class FlexView: UIScrollView {
                 // 更新子视图位置
                 view.frame.origin.y += offset
                 // 更新Y轴偏移量
-                //offset += view.frame.origin.y
+                offset += frame.origin.y
                 offset += view.frame.size.height
             }
             
@@ -170,7 +172,7 @@ public class FlexView: UIScrollView {
                 // 更新子视图位置
                 view.frame.origin.x += offset
                 // 更新X轴偏移量
-                //offset += view.frame.origin.x
+                offset += frame.origin.x
                 offset += view.frame.size.width
             }
         }
