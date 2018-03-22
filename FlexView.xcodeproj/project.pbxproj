@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F01C4683206392C300E21BC1 /* FlexView.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FlexView.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F0AEF4841F73832A006E613F /* FlexView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AEF4871F73832A006E613F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0AEF4891F73832A006E613F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		F0AEF4861F73832A006E613F /* FlexView */ = {
 			isa = PBXGroup;
 			children = (
+				F01C4683206392C300E21BC1 /* FlexView.playground */,
 				F0AEF4871F73832A006E613F /* AppDelegate.swift */,
 				F0AEF4891F73832A006E613F /* ViewController.swift */,
 				F0AEF4991F7383B0006E613F /* extensions.swift */,
@@ -310,6 +312,7 @@
 				F0AEF4981F73832A006E613F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

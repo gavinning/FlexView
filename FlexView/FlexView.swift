@@ -91,11 +91,13 @@ public class FlexView: UIScrollView {
         return height
     }
     
+    // 子视图排列方式
     public enum Axis {
-        case vertical   // 垂直对齐
+        case vertical   // 垂直对齐 默认
         case horizontal // 水平对齐
     }
     
+    // 子视图对齐方式
     public enum Alignment {
         case left   // axis.vertical only
         case right  // axis.vertical only
