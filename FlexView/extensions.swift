@@ -41,3 +41,23 @@ public extension UIImageView {
     }
 }
 
+public extension Array {
+    public mutating func index<T: Equatable>(of element: T) -> Int? {
+        for (index, item) in self.enumerated() {
+            if let item = item as? T, item == element {
+                return index
+            }
+        }
+        return nil
+    }
+    
+    public mutating func remove<T: Equatable>(of element: T) -> T? {
+        let index = self.index(of: element)
+        if let index = index {
+            return self.remove(at: index) as? T
+        }
+        else {
+            return nil
+        }
+    }
+}

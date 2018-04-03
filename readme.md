@@ -59,3 +59,21 @@ btn.addTarget(self, action: #selector(btnClicked(_:)), for: .touchUpInside)
     }
 }
 ```
+
+**添加动画和删除动画**
+```swift
+// 重写可选动画方法 默认为false
+flex.addSubview(_ view: UIView, animated: Bool)
+flex.removeSubview(_ view: UIView, animated: Bool)
+flex.insertSubview(_ view: UIView, at index: Int, animated: Bool)
+```
+
+<br/>
+<br/>
+Changelog
+---
+v0.3.0  
+1.重写``sizeToFit``方法用于重设FlexView所占空间  
+2.新增``contentSizeToFit``方法用于重设FlexView滚动区域  
+3.新增``removeSubview``方法，用于删除子视图;  不要直接用``item.removeFromSuperView``，因为FlexView无法跟踪子视图的删除操作  
+4.重写``addSubview````insertSubview``可选动画

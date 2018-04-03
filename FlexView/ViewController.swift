@@ -54,13 +54,19 @@ class ViewController: UIViewController {
     }
     
     @objc func imageClicked(_ sender: UIImageView) {
+        // 点击删除
         if let superview = sender.superview as? FlexView {
-//            superview.removeSubview(sender)
-//            superview.contentSizeToFit(animated: true)
-            
-            sender.frame.size.height = sender.frame.size.height/2
+            superview.removeSubview(sender, animated: true)
             superview.contentSizeToFit(animated: true)
         }
+        
+//        // 点击改变子视图大小
+//        if let superview = sender.superview as? FlexView {
+//            UIView.animate(withDuration: 0.4) {
+//                sender.frame.size.height = sender.frame.size.height/2
+//                superview.contentSizeToFit()
+//            }
+//        }
     }
 }
 
