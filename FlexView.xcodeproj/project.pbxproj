@@ -59,11 +59,11 @@
 		F0AEF4861F73832A006E613F /* FlexView */ = {
 			isa = PBXGroup;
 			children = (
+				F0AEF49B1F7383C2006E613F /* FlexView.swift */,
+				F0AEF4991F7383B0006E613F /* extensions.swift */,
 				F01C4683206392C300E21BC1 /* FlexView.playground */,
 				F0AEF4871F73832A006E613F /* AppDelegate.swift */,
 				F0AEF4891F73832A006E613F /* ViewController.swift */,
-				F0AEF4991F7383B0006E613F /* extensions.swift */,
-				F0AEF49B1F7383C2006E613F /* FlexView.swift */,
 				F0AEF48B1F73832A006E613F /* Main.storyboard */,
 				F0AEF48E1F73832A006E613F /* Assets.xcassets */,
 				F0AEF4901F73832A006E613F /* LaunchScreen.storyboard */,

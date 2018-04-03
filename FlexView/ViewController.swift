@@ -24,25 +24,43 @@ class ViewController: UIViewController {
 
     func flexview() {
         let flex = FlexView(frame: view.frame)
+        let imgs = ["001", "002", "003", "004", "008", "005", "006", "007", "009", "010", "011", "012", "013", "016", "014", "017", "015", "018", "019", "020"]
         
         flex.axis = .horizontal
         flex.backgroundColor = UIColor.init(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
         
         flex.isDirectionalLockEnabled = true
-
-        ["001", "002", "003", "004", "008", "005", "006", "007", "009", "010", "011", "012", "013", "016", "014", "017", "015", "018", "019", "020"].forEach { name in
-            let img = UIImageView(name: name, width: flex.frame.width)
-            // img?.frame.origin.x = 20
-            flex.addSubview(img!)
+        
+        imgs.forEach { (name) in
+            let imgButton = UIButton()
+            imgButton.setImage(UIImage(named: name), for: .normal)
+            imgButton.sizeToFit()
+            imgButton.frame.size.height = flex.frame.width/imgButton.frame.width*imgButton.frame.size.height
+            imgButton.frame.size.width = flex.frame.width
+            
+            imgButton.addTarget(self, action: #selector(imageClicked(_:)), for: .touchUpInside)
+            
+            flex.addSubview(imgButton)
         }
+
         
         flex.spacing = 16
         flex.axis = .vertical
         
-        flex.contentSize.height = max(flex.usedSpace.y, view.frame.height)
-        flex.contentSize.width = max(flex.usedSpace.x, view.frame.width)
+        flex.contentSize.height = max(flex.usedSpace.height, view.frame.height)
+        flex.contentSize.width = max(flex.usedSpace.width, view.frame.width)
         
         view.addSubview(flex)
+    }
+    
+    @objc func imageClicked(_ sender: UIImageView) {
+        if let superview = sender.superview as? FlexView {
+//            superview.removeSubview(sender)
+//            superview.contentSizeToFit(animated: true)
+            
+            sender.frame.size.height = sender.frame.size.height/2
+            superview.contentSizeToFit(animated: true)
+        }
     }
 }
 
