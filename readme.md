@@ -71,6 +71,9 @@ flex.insertSubview(_ view: UIView, at index: Int, animated: Bool)
 
 Changelog
 ---
+**v0.3.1**  
+1.修正``addSubview`` ``insertSubview`` Fade动画造成的子视图``alpha``属性失效的问题  
+**&nbsp**  
 **v0.3.0**  
 1.重写``sizeToFit``方法用于重设FlexView所占空间  
 2.新增``contentSizeToFit``方法用于重设FlexView滚动区域  

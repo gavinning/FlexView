@@ -179,6 +179,9 @@ public class FlexView: UIScrollView {
             return
         }
         
+        // 缓存子视图原有的alpha
+        let viewOriginalAlpha = view.alpha
+        
         // 记录子视图变化
         SubItems.insert(view, at: index)
         // 更新到当前视图
@@ -187,7 +190,7 @@ public class FlexView: UIScrollView {
         
         // Fade入场
         UIView.animate(withDuration: animated ? 0.3 : 0) {
-            view.alpha = 1
+            view.alpha = viewOriginalAlpha
             // 重新计算布局
             self.autoLayout()
         }
@@ -225,13 +228,15 @@ public class FlexView: UIScrollView {
             view.frame.origin.x += usedSpace.width - view.frame.size.width - view.frame.origin.x
         }
         
+        let viewOriginalAlpha = view.alpha
+        
         // 更新到当前视图
         view.alpha = 0.001
         super.addSubview(view)
         
         // Fade入场
         UIView.animate(withDuration: animated ? 0.3 : 0) {
-            view.alpha = 1
+            view.alpha = viewOriginalAlpha
         }
     }
     
