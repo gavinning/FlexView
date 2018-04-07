@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96099140CB4F52C41AAAD79B /* Pods_FlexView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA2E8089EFAA4955917DB35B /* Pods_FlexView.framework */; };
 		F0AEF4881F73832A006E613F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEF4871F73832A006E613F /* AppDelegate.swift */; };
 		F0AEF48A1F73832A006E613F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEF4891F73832A006E613F /* ViewController.swift */; };
 		F0AEF48D1F73832A006E613F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AEF48B1F73832A006E613F /* Main.storyboard */; };
@@ -14,10 +15,13 @@
 		F0AEF4921F73832A006E613F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0AEF4901F73832A006E613F /* LaunchScreen.storyboard */; };
 		F0AEF49A1F7383B0006E613F /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEF4991F7383B0006E613F /* extensions.swift */; };
 		F0AEF49C1F7383C2006E613F /* FlexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0AEF49B1F7383C2006E613F /* FlexView.swift */; };
+		F0BE0AF72078E084001790F5 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = F0BE0AF62078E084001790F5 /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F01C4683206392C300E21BC1 /* FlexView.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = FlexView.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		5CCA02354F0817BE062F3E17 /* Pods-FlexView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlexView/Pods-FlexView.debug.xcconfig"; sourceTree = "<group>"; };
+		6E713CF75DDEC79FAB541FE8 /* Pods-FlexView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlexView.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlexView/Pods-FlexView.release.xcconfig"; sourceTree = "<group>"; };
+		CA2E8089EFAA4955917DB35B /* Pods_FlexView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlexView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AEF4841F73832A006E613F /* FlexView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0AEF4871F73832A006E613F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0AEF4891F73832A006E613F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +31,7 @@
 		F0AEF4931F73832A006E613F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0AEF4991F7383B0006E613F /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		F0AEF49B1F7383C2006E613F /* FlexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlexView.swift; sourceTree = "<group>"; };
+		F0BE0AF62078E084001790F5 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,17 +39,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96099140CB4F52C41AAAD79B /* Pods_FlexView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53C2A9CF0E7A9A6B6C7D4759 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CCA02354F0817BE062F3E17 /* Pods-FlexView.debug.xcconfig */,
+				6E713CF75DDEC79FAB541FE8 /* Pods-FlexView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E70AD82A9AF3B471B011FC69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA2E8089EFAA4955917DB35B /* Pods_FlexView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F0AEF47B1F73832A006E613F = {
 			isa = PBXGroup;
 			children = (
+				F0BE0AF62078E084001790F5 /* readme.md */,
 				F0AEF4861F73832A006E613F /* FlexView */,
+				F0BE0AF52078DF58001790F5 /* Sources */,
 				F0AEF4851F73832A006E613F /* Products */,
+				53C2A9CF0E7A9A6B6C7D4759 /* Pods */,
+				E70AD82A9AF3B471B011FC69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,9 +86,7 @@
 		F0AEF4861F73832A006E613F /* FlexView */ = {
 			isa = PBXGroup;
 			children = (
-				F0AEF49B1F7383C2006E613F /* FlexView.swift */,
 				F0AEF4991F7383B0006E613F /* extensions.swift */,
-				F01C4683206392C300E21BC1 /* FlexView.playground */,
 				F0AEF4871F73832A006E613F /* AppDelegate.swift */,
 				F0AEF4891F73832A006E613F /* ViewController.swift */,
 				F0AEF48B1F73832A006E613F /* Main.storyboard */,
@@ -72,6 +97,14 @@
 			path = FlexView;
 			sourceTree = "<group>";
 		};
+		F0BE0AF52078DF58001790F5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F0AEF49B1F7383C2006E613F /* FlexView.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,9 +112,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0AEF4961F73832A006E613F /* Build configuration list for PBXNativeTarget "FlexView" */;
 			buildPhases = (
+				D3D0D486C2393970F8E629AC /* [CP] Check Pods Manifest.lock */,
 				F0AEF4801F73832A006E613F /* Sources */,
 				F0AEF4811F73832A006E613F /* Frameworks */,
 				F0AEF4821F73832A006E613F /* Resources */,
+				54B5A69455FDA100630EF8D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,11 +169,51 @@
 			files = (
 				F0AEF4921F73832A006E613F /* LaunchScreen.storyboard in Resources */,
 				F0AEF48F1F73832A006E613F /* Assets.xcassets in Resources */,
+				F0BE0AF72078E084001790F5 /* readme.md in Resources */,
 				F0AEF48D1F73832A006E613F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54B5A69455FDA100630EF8D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FlexView/Pods-FlexView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GLEKit/GLEKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GLEKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlexView/Pods-FlexView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3D0D486C2393970F8E629AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FlexView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0AEF4801F73832A006E613F /* Sources */ = {
@@ -269,6 +344,7 @@
 		};
 		F0AEF4971F73832A006E613F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CCA02354F0817BE062F3E17 /* Pods-FlexView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2288W7ZL47;
@@ -282,6 +358,7 @@
 		};
 		F0AEF4981F73832A006E613F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E713CF75DDEC79FAB541FE8 /* Pods-FlexView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2288W7ZL47;

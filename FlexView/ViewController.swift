@@ -28,7 +28,8 @@ class ViewController: UIViewController {
         
         flex.axis = .horizontal
         flex.backgroundColor = UIColor.init(red: 220/255, green: 220/255, blue: 220/255, alpha: 1)
-        
+        flex.frame.origin.y = -20
+        flex.frame.size.height += 20
         flex.isDirectionalLockEnabled = true
         
         imgs.forEach { (name) in
@@ -39,16 +40,14 @@ class ViewController: UIViewController {
             imgButton.frame.size.width = flex.frame.width
             
             imgButton.addTarget(self, action: #selector(imageClicked(_:)), for: .touchUpInside)
-            
+            // 不需要自己计算位置，直接添加自动间隔
             flex.addSubview(imgButton)
         }
 
         
         flex.spacing = 16
         flex.axis = .vertical
-        
-        flex.contentSize.height = max(flex.usedSpace.height, view.frame.height)
-        flex.contentSize.width = max(flex.usedSpace.width, view.frame.width)
+        flex.contentSizeToFit()
         
         view.addSubview(flex)
     }

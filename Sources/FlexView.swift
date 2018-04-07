@@ -13,6 +13,7 @@
 //
 
 import UIKit
+import GLEKit
 
 public class FlexView: UIScrollView {
     

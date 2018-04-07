@@ -1,7 +1,18 @@
 FlexView
 ---
-简单的盒模型，类似HTML的Flexbox，完整功能还在实现中...
+简单的盒模型，类似HTML的Flexbox，完整功能还在实现中...  
+适用一些常规布局场景，自动排序，自动间隔，进出场动画，可选纵横
 
+### Install
+```sh
+pod install FlexView
+```
+
+### Requirements
+* iOS 10.0+
+* Swift 4.0+
+
+### Usage
 
 ```swift
 let flex = FlexView(frame: CGRect(x: 0, y: 0, width: 320, height: 568))
@@ -73,7 +84,7 @@ Changelog
 ---
 **v0.3.1**  
 1.修正``addSubview`` ``insertSubview`` Fade动画造成的子视图``alpha``属性失效的问题  
-**&nbsp**  
+  
 **v0.3.0**  
 1.重写``sizeToFit``方法用于重设FlexView所占空间  
 2.新增``contentSizeToFit``方法用于重设FlexView滚动区域  

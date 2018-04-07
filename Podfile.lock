@@ -1,0 +1,16 @@
+PODS:
+  - GLEKit (0.1.1)
+
+DEPENDENCIES:
+  - GLEKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - GLEKit
+
+SPEC CHECKSUMS:
+  GLEKit: 67e7425468ab1559e718c7e501a3c01a2563538d
+
+PODFILE CHECKSUM: fda726623b750e16aecb743195e089f5f5c3cdb8
+
+COCOAPODS: 1.5.0
